@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<hrad>
+    <style>
+        .ok-confirm{
+            margin: 0px 0px 0px 50px;
+        }
+
+        #back{
+            border:1px solid #7892e8;
+            border-radius: 10px;
+            background-color: #7892e8;
+            color: white;
+            text-decoration: none;
+            padding:10px 20px;
+        }
+
+    </style>
+
+</hrad>
+<div class="ok-confirm">
+    <h1>予約完了しました。</h1>
+
+    <p>ご予約ありがとうございます。</p>
+
+    <a href="/" id="back">ホームへ戻る</a>
+</div>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <style>
+        .cats-details{
+            margin:10px 0px 0px 50px;
+        }
+        .art{
+            width: 300px;
+            height: 200px;
+            background-color: white;
+        }
+        #botton-cat-fixed{
+            position: fixed;
+            right:100px;
+            bottom: 80px;
+            border: 1px solid #7892e8;
+            border-radius: 10px;
+            background-color: #7892e8;
+            padding: 15px 30px;
+            color: white;
+            text-decoration: none;
+        }
+        .luna-split{
+            display: flex;
+            gap: 30px;
+        }
+        .noir-split{
+            display: flex;
+            gap: 30px;
+        }
+        .momo-split{
+            display: flex;
+            gap: 30px;
+        }
+       
+
+
+    </style>
+</head>
+    <a href="/reservation" id="botton-cat-fixed">予約ボタン</a>
+    <div class="cats-details">
+        <h1>meet the cats</h1>
+    
+        <p>
+            Moonlight Catsには、個性豊かな猫たちが暮らしています。
+            月の魔法によって言葉を話せるようになった彼らは、
+            それぞれ違った性格と特技を持っています。
+        </p>
+            <h3>🐱 Luna</h3>
+        <div class="luna-split">
+            <p class="art" style="color: black;">画像置き場</p>
+            <div>
+                <p>おっとりした性格の白猫。夜になると魔法の話をしてくれます。</p>
+                <a href="/luna">詳細</a>
+            </div>
+        </div>
+            <h3>🐈‍⬛ Noir</h3>
+        <div class="noir-split">
+            <p class="art" style="color: black;">画像置き場</p>
+            <div>
+                <p>ちょっぴり無口な黒猫。でも、実はとても面倒見がいい猫です。</p>
+                <a href="/noir">詳細</a>
+            </div>
+        </div>
+            <h3>🐈 Momo</h3>
+        <div class="momo-split">
+            <p class="art" style="color: black;">画像置き場</p>
+            <div>
+                <p>元気いっぱいの三毛猫。お客さんを見つけるとすぐに話しかけてきます。</p>
+                <a href="/momo">詳細</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

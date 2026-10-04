@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <style>
+        .home-details{
+            margin:10px 0px 0px 50px;
+        }
+        #home-details{
+            margin-right: 600px;
+        }
+        #home{
+            border:1px solid #7892e8;
+            border-radius: 10px;
+            background-color: #7892e8;
+            color: white;
+            padding:10px 20px;
+            display: inline-block;
+            margin:40px 0px 80px 50px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <article class="home-details">
+    <h1>Moonlight Cats </h1>
+
+    <h3>月の魔法がかかった、ちょっと不思議な猫カフェ。</h3>
+    
+        <p id="home-details">
+            ようこそ、Moonlight Catsへ。
+            ここにいる猫たちは、月の魔法の影響で
+            人間の言葉を話せるようになりました。
+            猫たちとおしゃべりしたり、一緒に遊んだり、静かな夜のひとときを過ごしたり。
+            昼間とは少し違う、Moonlight Catsならではの特別な時間をお楽しみください。
+        </p>
+
+    </article> 
+
+        <a href="/cats" id="home">猫たちに会う</a>
+
+    <article class="home-details">
+        <dav id="mini-game">
+            <h2>cats room（ちょっとしたお話ができます）</h1>
+                <p><small>Pythonのlen関数で入力された文字数を取得し、条件分岐によって返信内容を変えています。あらかじめ設定されていない内容には対応していません。</small></p>
+                <br>
+            <form method="POST">
+
+                <label>
+                    ネコに話しかける：
+                    <p><small>複雑な言葉は理解できないため５文字以内でお願いします。</small></p>
+                    <input type="text" name="text" required>
+                </label>
+                <br>
+                <br>
+                <label>
+                    今何時？
+                    <p><small>猫が人間の言葉を話せるのは１８時から６時までです。</small></p>
+
+                    <input type="number" name="hour" min="0" max="23" required>
+                </label>
+                <br>
+                <br>
+                <button type="submit">話しかける</button>
+                <p>{{data}}</p>
+            </form>
+        </div>
+    </article>
+
+
+</body>
+{% endblock %}

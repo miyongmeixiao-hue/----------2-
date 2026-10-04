@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<hrad>
+    <style>
+        .confirm-ok{
+            margin:10px 0px 0px 50px;
+        }
+        #confirm{
+            border: 1px solid #7892e8;
+            border-radius: 10px;
+            background-color: #7892e8;
+            padding:10px 20px;
+            margin:60px 0px 0px 50px;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            
+        }
+    </style>
+</hrad>
+<div class="confirm-ok">
+    <h2>この内容で確定しますか？</h2>
+    <table>
+        <tr>
+            <th>お名前</th>
+            <td>{{ name }} 様</td>
+        </tr>
+        <tr>
+            <th>予定日</th>
+            <td>  {{ date }}</td>
+        </tr>
+        <tr>
+            <th>時間</th>
+            <td>  {{ time }}</td>
+        </tr>
+        <tr>
+            <th>予約人数</th>
+            <td>{{ people }}人</td>
+        </tr>
+    </table>
+</div>
+<a href="/ok"id="confirm">確定します</a>
+<br>
+<br>
+<br>
+<br>
+<p>現在はフォーム入力と確認画面まで実装しています。このページに今後SQLiteを導入し、予約情報の保存・管理機能を追加する予定です。</p>
+
+{% endblock %}
+

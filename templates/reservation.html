@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_downward" />
+    <style>
+        .reservation{
+            margin-left:50px;
+        }
+    
+        .material-symbols-outlined{
+            margin-left: 20px;
+        }
+        .button{
+            margin-left: 50px;
+        }
+        .split{
+            display: flex;
+            gap: 30px;
+        }
+        .reservation-description{
+            border: 1px solid #7892e8;
+            border-radius: 10px;
+            background-color: #7892e8;
+            display: inline-block;
+            width:500px;
+            height:300px;
+            margin: 50px 0px 0px 60px;
+            font-size:30px;
+            padding:0px 0px 0px 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="split">
+        <div>
+            <form action="/submit" method="POST">
+                <article class="reservation">
+                    <h1>予約フォーム</h1>
+                    <label>お名前（デモ用・個人情報は入力せず、1文字で入力してください）</label><br>
+                    <input type="text" name="name" maxlength="1" required>
+                    <br>
+                    <br>
+                    <label>予定日</label><br>
+                    <input type="date" name="date" required>  <input type="time" name="time" required>
+                    <br>
+                    <br>
+                    <label>予約人数（最大５人まで）</label><br>
+                    <input type="number" name="people" min=0 max=5 required>
+                    <br>
+                    <br>
+                </article>
+                    <div class="button">
+                        <button type="reset">リセット</button>  <button type="submit">予約に進む</button>  
+                    </div>
+        </div>
+        <div>
+
+                <li class="reservation-description">
+                    <ol type="1">
+                        <li>予約情報の入力</li>
+                        <span class="material-symbols-outlined">arrow_downward</span>
+                        <li>確認画面の表示</li>
+                        <span class="material-symbols-outlined">arrow_downward</span>
+                        <li>予約の完了</li>
+                    </ol>
+                </li>
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}
