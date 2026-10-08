@@ -1,5 +1,49 @@
 {% extends "base.html" %}
-
 {% block content %}
-<p>準備中</p>
+<head>
+    <style>
+        table{
+            margin:10px 0px 0px 50px;
+        }
+        th, td {
+            border: 1px solid #7892e8;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>企業情報</caption>
+        <tr>
+            <th>企業名</th>
+            <td>Moonlight Cats</td>
+        </tr>
+        <tr>
+            <th>コンセプト</th>
+            <td>月夜と猫をテーマにした、架空の猫カフェです。<br>
+                夜の時間帯に、個性豊かな猫たちとゆっくり過ごせる空間をイメージして制作しています。</td>
+        </tr>
+        <tr>
+            <th>営業時間</th>
+            <td>18:00〜翌6:00（月が出てる日に限る）</td>
+        </tr>
+        <tr>
+            <th>定休日</th>
+            <td>月が見えない日</td>
+        </tr>
+        <tr>
+            <th>所在地</th>
+            <td>〒000-0000<br>
+                月明かり県ムーンライト市 猫町１８－６</td>
+        </tr>
+        <tr>
+            <th>事業内容</th>
+            <td>猫カフェの運営、猫に関するイベントの企画・開催</td>
+        </tr>
+    </table>
+        <footer>
+            <p><small> &copy;本サイトはWeb制作の学習・ポートフォリオを目的として制作した架空の猫カフェサイトです。</small></p>
+        </footer>
+</body>
 {% endblock %}
