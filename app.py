@@ -53,11 +53,9 @@ def speak():
              data="こんばんわ！"
         elif len(text)>=6:
             data="文字長すぎて理解出ないよ！！５文字以内でお願いします"
-        elif hour <= 19 or hour >=5:
-            data="にゃー（月の魔法がないため言葉がしゃべれないよ）"
         else:
-            data="meow"
-    return render_template("home.html",data=data)
+            data="にゃー（月の魔法がないため言葉がしゃべれないよ）"
+        return render_template("home.html",data=data)
 
 @app.route("/submit", methods=["GET", "POST"])
 def submit():
